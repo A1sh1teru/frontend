@@ -1,0 +1,70 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1A1A1A;
+    border-style: solid;
+    border-color: #262626;
+    border-width: 1px;
+    height: 99px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 162px;
+}
+
+.title {
+    color: #FFFFFF;
+    padding-left: 10px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttonContact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    background-color: #141414;
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #262626;
+    margin-right: 162px;
+    width: 136px;
+    height: 59px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+@media (min-width: 1440px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}
+
+@media (min-width: 992px) {
+    
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 320px) {
+
+}

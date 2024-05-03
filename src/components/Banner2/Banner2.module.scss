@@ -1,0 +1,60 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+.banner2Container {
+    margin-top: 150px;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    display: flex;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.img1 {
+    position: absolute;
+    z-index: -1;
+    margin-top: 59px;
+    right: auto;
+    left: 0;
+}
+
+.img2 {
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    left: auto;
+    // width: 100%;
+}
+
+.textContainer {
+    margin: 100px 0 100px 162px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 250px;
+}
+
+.title {
+    @include title60;
+}
+
+.description {
+    width: 1200px;
+    color: $gray-text-color;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;
+    margin-top: 14px;
+}
+
+.btnContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.btn {
+    @include purpleBtn;
+    padding: 18px 24px;
+}

@@ -1,0 +1,135 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+.faqContainer {
+    width: 1596px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+}
+
+.topContainer {
+    margin-bottom: 80px;
+}
+
+.topTitle {
+    @include title60;
+}
+
+.topSubContainer {
+    display: flex;
+}
+
+.subTitle {
+    width: 1200px;
+    color: $gray-text-color;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;
+    margin-top: 14px;
+}
+
+.viewBtn {
+    @include grayBtn;
+    width: 196px;
+    height: 63px;
+    margin-left: 200px;
+}
+
+.middleContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 0px;
+}
+
+.questionContainer {
+    border-style: solid;
+    border-radius: 12px;
+    border-color: $border-color;
+    border-width: 1px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.questionTitle {
+    color: $absolute-white-color;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 150%;
+    margin-bottom: 14px;
+    height: 72px;
+}
+
+.questionDescription {
+    color: $gray-text-color;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;
+    margin-bottom: 40px;
+}
+
+.readMoreBtn {
+    color: $absolute-white-color;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;
+    text-decoration: underline;
+    margin-left: 6px;
+}
+
+.readMoreBtn2 {
+    @include grayBtn;
+    width: 134px;
+    height: 60px;
+}
+
+.bottomContainer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid $border-color;
+    margin-top: 50px;
+    padding-top: 16px;
+}
+
+.pageNumber {
+    color: $gray-text-color;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.currentPage {
+    color: $absolute-white-color;
+}
+
+.arrowsContainer {
+    display: flex;
+}
+
+.arrowLeft {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 58px;
+    height: 58px;
+    border-radius: 69px;
+    color: $border-color;
+    border-style: solid;
+    border-width: 1px;
+    margin-right: 10px;
+}
+
+.arrowRight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 58px;
+    height: 58px;
+    border-radius: 69px;
+    color: $border-color;
+    border-style: solid;
+    border-width: 1px;
+}

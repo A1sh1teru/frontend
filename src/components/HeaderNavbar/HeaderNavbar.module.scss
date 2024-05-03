@@ -1,0 +1,63 @@
+// .navbar {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     background-color: #1A1A1A;
+//     border-style: solid;
+//     border-color: #262626;
+//     border-width: 1px;
+//     height: 99px;
+// }
+
+.buttonsList {
+    display: flex;
+    align-items: center;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+}
+
+.navLink {
+    text-decoration: none;
+}
+
+.homeButton {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 96px;
+    height: 55px;
+    background-color: #141414;
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #262626;
+    font-size: 18px;
+}
+
+.listItem2 {
+    padding-left: 30px;
+    font-size: 18px;
+}
+
+.listItem3 {
+    padding-left: 30px;
+    font-size: 18px;
+    text-decoration-color: none;
+}
+
+.listItem4 {
+    padding-left: 30px;
+    font-size: 18px;
+}
+
+.list {
+    list-style-type: none ;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF;
+}

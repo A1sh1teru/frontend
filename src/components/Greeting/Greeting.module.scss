@@ -1,0 +1,475 @@
+.subcontainer1 {
+    display: flex;
+    // height: 814px;
+    position: relative;
+}
+
+.leftSubContainer1 {
+    background-color: #141414;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    width: 55%;
+    padding-bottom: 144px;
+    /* width: 1000px; */
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin-left: 162px;
+}
+
+.title2 {
+    font-size: 60px;
+    font-weight: 600;
+    color: #FFFFFF;
+    line-height: 120%;
+    margin-top: 144px;
+}
+
+.subTitle2 {
+    color: #999999;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;
+    margin-top: 24px;
+}
+
+.buttonContainer1 {
+    display: flex;
+    margin-left: 162px;
+    margin-top: 60px;
+}
+
+.learnButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    background-color: #141414;
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #262626;
+    width: 139px;
+    height: 63px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.browseButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    background-color: #703BF7;
+    border-radius: 10px;
+    width: 191px;
+    height: 63px;
+    font-size: 18px;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+.buttonContainer2 {
+    display: flex;
+    margin-left: 162px;
+    margin-top: 60px;
+}
+
+.happyButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    padding-left: 24px;
+    width: 239px;
+    height: 121px;
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #262626;
+}
+
+.text200 {
+    color: #FFFFFF;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.textHappy {
+    color: #999999;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.propertiesButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    padding-left: 24px;
+    width: 239px;
+    height: 121px;
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #262626;
+    margin-left: 20px;
+}
+
+.text10 {
+    color: #FFFFFF;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.textProperties {
+    color: #999999;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.yearsButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    padding-left: 24px;
+    width: 239px;
+    height: 121px;
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #262626;
+    margin-left: 20px;
+}
+
+.text16 {
+    color: #FFFFFF;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.textYears {
+    color: #999999;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.rightSubContainer1 {
+    /* display: flex; */
+    border-style: solid;
+    border-width: 1px;
+    border-color: #262626;
+    position: relative;
+    background-color: #262626;
+    width: 45%;
+    /* width: 920px; */
+}
+
+.circleContainer {
+    position: absolute;
+    margin-left: 49.8%;
+    margin-right: 50.2%;
+    margin-top: 144px;
+    width: 175px;
+    height: 175px;
+    background-color: #141414;
+    border-radius: 159.09px;
+    border-style: solid;
+    border-color: #262626;
+}
+
+.circleText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-55%, -50%);
+    overflow: visible;
+    fill: #FFFFFF;
+    font-size: 15.7px;
+    font-weight: 600;
+}
+
+.circleText path {
+    fill: none;
+}
+
+.subcontainer2 {
+    display: flex;
+    justify-content: space-around;
+    background-color: #141414;
+    border-style: solid;
+    border-color: #262626;
+    border-width: 1px;
+}
+
+.findContainer {
+    width: 455px;
+    height: 212px;
+    background-color: #1A1A1A;
+    border-style: solid;
+    border-color: #262626;
+    border-width: 1px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.arrow1 {
+    position:absolute;
+    margin-left: 395px;
+    margin-bottom: 150px;
+}
+
+.homeImg {
+    padding-bottom: 15px;
+}
+
+.findText {
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.unlockContainer {
+    width: 455px;
+    height: 212px;
+    background-color: #1A1A1A;
+    border-style: solid;
+    border-color: #262626;
+    border-width: 1px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.managementContainer {
+    width: 455px;
+    height: 212px;
+    background-color: #1A1A1A;
+    border-style: solid;
+    border-color: #262626;
+    border-width: 1px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.investmentsContainer {
+    width: 455px;
+    height: 212px;
+    background-color: #1A1A1A;
+    border-style: solid;
+    border-color: #262626;
+    border-width: 1px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+@media (min-width: 1366px) and (max-width: 1979px) {
+    .title2 {
+        font-size: 46px;
+    }
+
+    .subTitle2 {
+        font-size: 16px;
+        padding-right: 20px;
+    }
+
+    .textContainer {
+        margin: 0 80px;
+    }
+
+    .circleContainer {
+        // margin-top: 95px;
+        width: 129px;
+        height: 129px;
+        border-radius: 117.27px;
+    }
+
+    .buttonContainer1 {
+        margin-left: 80px;
+    }
+
+    .buttonContainer2 {
+        margin-left: 80px;
+    }
+
+    .learnButton {
+        width: 111px;
+        height: 49px;
+        font-size: 14px;
+    }
+    
+    .browseButton {
+        width: 151px;
+        height: 49px;
+        font-size: 14px;
+    }
+
+    .happyButton {
+        width: 192px;
+        height: 99px;
+    }
+
+    .text200 {
+        font-size: 30px;
+    }
+    
+    .textHappy {
+        font-size: 16px;
+    }
+
+    .propertiesButton {
+        width: 192px;
+        height: 99px;
+    }
+
+    .text10 {
+        font-size: 30px;
+    }
+    
+    .textProperties {
+        font-size: 16px;
+    }
+
+    .yearsButton {
+        width: 192px;
+        height: 99px;
+    }
+
+    .text16 {
+        font-size: 30px;
+    }
+    
+    .textYears {
+        font-size: 16px;
+    }
+
+    .leftSubContainer1 {
+        padding-bottom: 98px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+    .title2 {
+        font-size: 46px;
+    }
+
+    .subTitle2 {
+        font-size: 16px;
+        padding-right: 20px;
+    }
+
+    .textContainer {
+        margin: 0 80px;
+    }
+
+    .circleContainer {
+        // margin-top: 95px;
+        width: 129px;
+        height: 129px;
+        border-radius: 117.27px;
+    }
+
+    .buttonContainer1 {
+        margin-left: 80px;
+    }
+
+    .buttonContainer2 {
+        margin-left: 80px;
+    }
+
+    .learnButton {
+        width: 111px;
+        height: 49px;
+        font-size: 14px;
+    }
+    
+    .browseButton {
+        width: 151px;
+        height: 49px;
+        font-size: 14px;
+    }
+
+    .happyButton {
+        // width: 282px;
+        // width: 192px;
+        width: 152px;
+        height: 99px;
+    }
+
+    .text200 {
+        font-size: 26px;
+    }
+    
+    .textHappy {
+        font-size: 12px;
+    }
+
+    .propertiesButton {
+        // width: 282px;
+        width: 152px;
+        height: 99px;
+    }
+
+    .text10 {
+        font-size: 26px;
+    }
+    
+    .textProperties {
+        font-size: 12px;
+    }
+
+    .yearsButton {
+        width: 152px;
+        // width: 282px;
+        height: 99px;
+    }
+
+    .text16 {
+        font-size: 26px;
+    }
+    
+    .textYears {
+        font-size: 12px;
+    }
+
+    .leftSubContainer1 {
+        padding-bottom: 98px;
+        width: 60%;
+    }
+}

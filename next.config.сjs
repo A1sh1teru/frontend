@@ -1,0 +1,31 @@
+/** @type {import('next').NextConfig} */
+
+import { join } from 'path'
+
+module.exports = {
+  webpack: (config, { defaultLoaders }) => {
+    config.module.rules.push({
+      test: /\.scss$/,
+      use: [
+        defaultLoaders.babel,
+        {
+          loader: require('sass-loader'),
+          options: {
+            sassOptions: {
+              includePaths: [join(__dirname, 'src/styles')]
+            }
+          }
+        }
+      ]
+    })
+    return config
+  }
+}
+
+// const path = require('path')
+ 
+// module.exports = {
+//   sassOptions: {
+//     includePaths: [path.join(__dirname, 'src/styles')],
+//   },
+// }
