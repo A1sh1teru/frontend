@@ -1,4 +1,145 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
 .findFilterContainer {
     display: flex;
     flex-direction: column;
+    color: $gray-text-color;
+    background-color: #141414;
+    background: linear-gradient(108deg, rgba(38,38,38,0) 100%, rgba(38,38,38,1) 53%);
+}
+
+.topFindFilterContainer {
+    display: flex;
+    flex-direction: column;
+    padding-top: 150px;
+    padding-right: 400px;
+    padding-left: 162px;
+    padding-bottom: 108px;
+    gap: 14px;
+}
+
+.titleTop {
+    color: $absolute-white-color;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.descriptionTop {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.botFindFilterContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.searchContainer {
+    display: flex;
+    gap: 50px;
+    margin: 0 310px;
+    padding: 20px 20px 20px 14px;
+    background-color: #141414;
+    box-shadow: 0 0 0 10px #191919;
+    border-radius: 12px 12px 0 0;
+    z-index: 2;
+    margin-bottom: -55px;
+}
+
+.inputSearch {
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0;
+    background-color: #141414;
+    border: none;
+    padding-left: 10px;
+    color: $absolute-white-color;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.inputSearch:focus {
+    outline: none;
+}
+
+.buttonSearch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 8px;
+    padding: 18px 24px;
+    color: #FFFFFF;
+    background-color: $purple-btn-color;
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #262626;
+    font-size: 18px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.buttonSearchText {
+    display: flex;
+    flex-direction: row;
+}
+
+.filtersContainer {
+    background-color: #141414;
+    padding-top: 64px;
+    z-index: -2;
+    border-top: 1px solid #333333;
+}
+
+.filtersSubContainer {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    background-color: #191919;
+    z-index: -2;
+    margin-left: 172px;
+    margin-right: 172px;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    background-color: #141414;
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%;
+}
+
+.filterText {
+    padding-left: 20px;
+    white-space: nowrap;
+    line-height: 150%;
+}
+
+.filterIcon {
+    height: 24px;
+    width: 24px;
+}
+
+.btnIcon {
+    margin-left: auto;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 46px;
+    background-color: #1A1A1A;
+}
+
+.arrowIcon {
+    height: 24px;
 }

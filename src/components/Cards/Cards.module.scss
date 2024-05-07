@@ -1,11 +1,18 @@
 @import '../../styles/mixins.scss';
 @import '../../styles/variables.scss';
 
+.promoWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+
 .promoContainer {
-    width: 1596px;
+    // width: 1596px;
     display: flex;
     flex-direction: column;
-    margin-top: 150px;
+    padding: 0 162px;
 }
 
 .topContainer {

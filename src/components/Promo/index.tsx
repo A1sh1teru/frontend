@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./Promo.module.scss"
 import Image from "next/image";
 
@@ -18,7 +19,9 @@ function Promo() {
                     </div>
 
                     <div className={styles.viewBtn}>
-                        View All Properties
+                        <Link href="/properties" className={styles.propertyLink}>
+                            View All Properties
+                        </Link>
                     </div>
 
                 </div>
@@ -105,9 +108,9 @@ function Promo() {
                                 </div>
 
                                 <div className={styles.detailsBtn}>
-
-                                    View Property Details
-
+                                    <Link href="/properties/property" className={styles.propertyLink}>
+                                        View Property Details
+                                    </Link>
                                 </div>
 
                             </div>
@@ -192,9 +195,9 @@ function Promo() {
                                 </div>
 
                                 <div className={styles.detailsBtn}>
-
-                                    View Property Details
-
+                                    <Link href="/properties/property" className={styles.propertyLink}>
+                                        View Property Details
+                                    </Link>
                                 </div>
 
                             </div>
@@ -279,7 +282,9 @@ function Promo() {
 
                                 <div className={styles.detailsBtn}>
 
-                                    View Property Details
+                                    <Link href="/properties/property" className={styles.propertyLink}>
+                                        View Property Details
+                                    </Link>
 
                                 </div>
 
