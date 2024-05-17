@@ -198,3 +198,14 @@
     border-style: solid;
     border-width: 1px;
 }
+
+@media (max-width: 1800px) {
+    .cardsContainer {
+        display: grid;
+    }
+
+    .img {
+        // width: auto;
+        // height: auto;
+    }
+}

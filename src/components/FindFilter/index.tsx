@@ -1,7 +1,22 @@
+'use client'
+
+import { useState } from "react";
 import styles from "./FindFilter.module.scss"
 import Image from "next/image";
+import { useCategoriesQuery } from "@/hooks/useCategoriesQuery";
+import clsx from 'clsx';
 
 function FindFilter() {
+
+    const [categoryId, setCategoryId] = useState(0);
+    
+    const { data, isLoading, isSuccess } = useCategoriesQuery();
+
+    const [showList, setShowList] = useState(false);
+
+    const handleButtonClick = () => {
+        setShowList(prevState => !prevState);
+    };
 
     return(
         <div className={styles.findFilterContainer}>
@@ -78,9 +93,27 @@ function FindFilter() {
                                 />
                             </i>
 
-                            <span className={styles.filterText}>Property Type</span>
+                            <div>
 
-                            <div className={styles.btnIcon}>
+                                <span className={styles.filterText}>Property Type</span>
+                                
+                                {showList && (
+                                    <ul className={styles.dropdownContent}>
+                                        {data?.map(category => (
+                                            <li
+                                                key={category.id}
+                                                className={clsx(styles.filterText2, categoryId === category.id && styles.active)}
+                                                onClick={() => setCategoryId(category.id)}
+                                            >
+                                                {category.propertyType}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
+
+                            </div>
+
+                            <div className={styles.btnIcon} onClick={handleButtonClick}>
                                 <i className={styles.arrowIcon}>
                                     <Image
                                     src="icons/ArrowDown.svg"

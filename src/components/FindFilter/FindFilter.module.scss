@@ -94,7 +94,6 @@
 .filtersContainer {
     background-color: #141414;
     padding-top: 64px;
-    z-index: -2;
     border-top: 1px solid #333333;
 }
 
@@ -103,7 +102,6 @@
     justify-content: space-around;
     gap: 20px;
     background-color: #191919;
-    z-index: -2;
     margin-left: 172px;
     margin-right: 172px;
     padding: 10px;
@@ -119,10 +117,21 @@
     width: 100%;
 }
 
+.dropdownContent {
+    display: none;   
+    // position: absolute;
+    // background-color: #f9f9f9;
+    z-index: 1;
+  }
+
 .filterText {
     padding-left: 20px;
     white-space: nowrap;
     line-height: 150%;
+}
+
+.filterText2 {
+    display: block;
 }
 
 .filterIcon {
@@ -138,8 +147,19 @@
     justify-content: center;
     border-radius: 46px;
     background-color: #1A1A1A;
+    background: none;
+    border: none;
+}
+
+.filter:hover .dropdownContent {
+    display: block;
+  }
+
+.btnIcon:hover {
+    cursor: pointer;
 }
 
 .arrowIcon {
     height: 24px;
+    width: 24px;
 }

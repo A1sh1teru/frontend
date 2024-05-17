@@ -14,7 +14,7 @@ function Footer() {
                     <div className={styles.logo}>
 
                         <Image 
-                        src="img/Logo.svg"
+                        src="/img/Logo.svg"
                         width={48}
                         height={48}
                         alt="Logo"

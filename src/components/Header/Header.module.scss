@@ -1,3 +1,6 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -6,13 +9,20 @@
     border-style: solid;
     border-color: #262626;
     border-width: 1px;
-    height: 99px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    position: relative;
 }
 
 .logo {
     display: flex;
     align-items: center;
     margin-left: 162px;
+}
+
+.logoImg {
+    width: 48px;
+    height: 48px;
 }
 
 .title {
@@ -28,6 +38,13 @@
     align-items: center;
 }
 
+.btnContainer {
+    display: flex;
+    gap: 30px;
+    margin-right: 162px;
+    align-items: center;
+}
+
 .buttonContact {
     display: flex;
     justify-content: center;
@@ -38,23 +55,56 @@
     border-width: 1px;
     border-style: solid;
     border-color: #262626;
-    margin-right: 162px;
-    width: 136px;
-    height: 59px;
+    padding: 20px 20px;
     font-size: 18px;
     font-weight: 500;
+}
+
+.authBtn {
+    font-size: 18px;
+    font-weight: 500;
+    color: $absolute-white-color;
+}
+
+.burgerMenu {
+    position: absolute;
+    right: 0;
+    left: auto;
+    z-index: 10;
 }
 
 @media (min-width: 1440px) {
 
 }
 
-@media (min-width: 1200px) {
+@media (max-width: 1200px) {
+    .title {
+        font-size: 20px;
+    }
 
+    .buttonContact {
+        padding: 16px 16px;
+        font-size: 14px;
+    }
+    
+    .authBtn {
+        font-size: 14px;
+    }
 }
 
-@media (min-width: 992px) {
-    
+@media (max-width: 1023px) {
+    .logo {
+        margin-left: 60px;
+    }
+
+    .btnContainer {
+        display: none;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
 }
 
 @media (min-width: 768px) {

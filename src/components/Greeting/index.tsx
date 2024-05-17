@@ -99,7 +99,7 @@ function Greeting() {
 
           <div className={styles.rightSubContainer1}>
 
-          <div className={styles.abstractImg2}>
+            <div className={styles.abstractImg2}>
               <Image 
                 src="img/AbstractDesign2.svg"
                 fill={true}

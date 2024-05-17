@@ -1,3 +1,5 @@
+'use client'
+
 import styles from "./page.module.css";
 import Header from "@/components/Header"
 import Banner from "@/components/Banner";
@@ -7,6 +9,7 @@ import Review from "@/components/Review";
 import Faq from "@/components/Faq";
 import Banner2 from "@/components/Banner2";
 import Footer from "@/components/Footer";
+import HeaderBurgerMenu from "@/components/HeaderBurgerMenu";
 
 export default function Home() {
   return (
@@ -16,7 +19,7 @@ export default function Home() {
       </div>
 
       <header className={styles.header}>
-        <Header />  
+        <Header />
       </header>
 
       <div>

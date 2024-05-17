@@ -1,0 +1,67 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+.authWrapper {
+    padding: 150px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.authContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    background-color: #1a1a1a;
+    border-radius: 18px;
+    padding: 30px 30px;
+}
+
+.logo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    color: $absolute-white-color;
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 22px;
+}
+
+.logoImg {
+    width: 48px;
+    height: 48px;
+}
+
+.input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 10px;
+    background-color: #141414;
+    border: none;
+    border-radius: 8px;
+    padding-left: 10px;
+    color: $absolute-white-color;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.createBtn {
+    @include purpleBtn;
+    padding: 6px 20px;
+    margin-top: 8px;
+}
+
+.linkBtn {
+    color: $absolute-white-color;
+}
+
+.textGuest {
+    margin-top: 22px;
+}
+
+.link {
+    color: $gray-text-color;
+}

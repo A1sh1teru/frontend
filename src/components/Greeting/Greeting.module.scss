@@ -1,6 +1,5 @@
 .subcontainer1 {
     display: flex;
-    // height: 814px;
     position: relative;
 }
 
@@ -471,5 +470,85 @@
     .leftSubContainer1 {
         padding-bottom: 98px;
         width: 60%;
+    }
+}
+
+@media (max-width: 1023px) {
+    .subcontainer1 {
+        flex-direction: column-reverse;
+    }
+    
+    .rightSubContainer1 {
+        height: 302px;
+        width: 100%;
+    }
+
+    .leftSubContainer1 {
+        margin: 30px 60px;
+        display: flex;
+        width:auto;
+        padding-bottom: 0;
+    }
+
+    .textContainer {
+        margin: 0;
+    }
+
+    .title2 {
+        margin: 0;
+    }
+
+    .buttonContainer1 {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .buttonContainer2 {
+        margin-left: 0;
+        display: grid;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .propertiesButton {
+        margin-left: 0;
+    }
+
+    .yearsButton {
+        margin-left: 0;
+    }
+
+    .circleContainer {
+        display: none;
+    }
+
+    .subcontainer2 {
+        display: grid;
+    }
+
+    .arrow1 {
+        margin-left: 185px;
+    }
+}
+
+@media (max-width: 480px) {
+    .findContainer {
+        width: fit-content;
+        padding: 0 20px;
+    }
+
+    .unlockContainer {
+        width: fit-content;
+        padding: 0 20px;
+    }
+
+    .managementContainer {
+        width: fit-content;
+        padding: 0 10px;
+    }
+
+    .investmentsContainer {
+        width: fit-content;
+        padding: 0 10px;
     }
 }

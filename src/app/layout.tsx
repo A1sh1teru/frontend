@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Urbanist } from "next/font/google";
 import "./globals.css";
 import '@/styles/index.scss';
+import ReactQueryProvider from '@/providers/react-query';
 
 const urbanist = Urbanist({ subsets: ["latin"] });
 
@@ -17,7 +18,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={urbanist.className}>
-      <body className="wrapper">{children}</body>
+      <body className="wrapper"><ReactQueryProvider>
+                    {/* <Header /> */}
+                    <main>{children}</main>
+                    {/* <Footer /> */}
+                </ReactQueryProvider></body>
     </html>
   );
 }

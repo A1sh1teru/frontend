@@ -1,5 +1,5 @@
 .banner {
-    height: 63px;
+    height: 49px;
     background-color: #1A1A1A;
     border-style: solid;
     border-color: #262626;
@@ -31,10 +31,18 @@
 
 .cross {
     position: absolute;
+    width: 26px;
+    height: 26px;
     margin-top: 5px;
     margin-right: 32px;
     right: 0;
     left: auto;
+}
+
+.cross:hover {
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.2s;
 }
 
 @media (min-width: 480px) and (max-width: 768px) {
