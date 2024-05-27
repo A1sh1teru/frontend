@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import Faq from "@/components/Faq";
 import Banner2 from "@/components/Banner2";
 
-export default function Property() {
+export default function Property2() {
 
     return(
         

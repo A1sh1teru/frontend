@@ -1,5 +1,6 @@
 import Image from "next/image"
 import styles from "./Greeting.module.scss"
+import Link from "next/link";
 
 function Greeting() {
 
@@ -31,13 +32,13 @@ function Greeting() {
 
               <div className={styles.learnButton}>
                 
-                Learn More
+                <Link href="#" className={styles.link}>Learn More</Link>
                 
               </div>
 
               <div className={styles.browseButton}>
                 
-                Browse Properties
+              <Link href="/properties" className={styles.link}>Browse Properties</Link>
               
               </div>
 

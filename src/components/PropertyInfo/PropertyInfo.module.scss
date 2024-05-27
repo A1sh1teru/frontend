@@ -1,0 +1,565 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+.propertyWrapper{
+    margin: 120px 162px 0 162px;
+}
+
+.propertyInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.topContainer {
+    color: $absolute-white-color;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.topSubContainer {
+    display: flex;
+    gap: 50px;
+}
+
+.textContainer1 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.iconLocation {
+    display: flex;
+    width: 24px;
+    height: 24px;
+}
+
+.textContainer2 {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    justify-content: center;
+}
+
+.priceText {
+    color: $gray-text-color;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.priceAmount {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.botSubContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1A1A1A;
+    border-radius: 12px;
+    padding: 50px;
+    gap: 30px;
+}
+
+.topImages {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
+    padding: 20px;
+    background-color: #141414;
+    border-radius: 12px;
+}
+
+.propertyImgMin {
+    width: 144px;
+    height: 94px;
+    position: relative;
+}
+
+.botImages {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.propertyImgMax1 {
+    width: 733px;
+    height: 583px;
+    position: relative;
+}
+
+.propertyImgMax2 {
+    width: 733px;
+    height: 583px;
+    position: relative;
+}
+
+.scrollImages {
+    display: flex;
+    padding: 10px;
+    background-color: #141414;
+    border-radius: 100px;
+    align-items: center;
+    gap: 10px;
+}
+
+.arrowLeft {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1A1A1A;
+    border-radius: 69px;
+}
+
+.arrowRight {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1A1A1A;
+    border-radius: 69px;
+}
+
+.indicatorsContainer {
+    display: flex;
+    gap: 4px;
+}
+
+.indicatorBlue {
+    background-color: #703BF7;
+    width: 20px;
+    height: 5px;
+    border-radius: 60px;
+}
+
+.indicatorGray {
+    background-color: #4D4D4D;
+    width: 20px;
+    height: 5px;
+    border-radius: 60px;
+}
+
+.bottomContainer {
+    display: flex;
+    gap: 30px;
+}
+
+.leftSubContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 50px;
+    width: 50%;
+}
+
+.leftTitle {
+    color: $absolute-white-color;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.leftDescription {
+    color: $gray-text-color;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.leftInfo {
+    display: flex;
+    gap: 40px;
+}
+
+.infoItem {
+    display: flex;
+    flex-direction: column;
+    color: $absolute-white-color;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 150%;
+    gap: 10px;
+}
+
+.infoIcon {
+    margin-right: 4px;
+    padding-top: 4px;
+    color: $gray-text-color;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.rightSubContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    gap: 50px;
+}
+
+.rightTitle {
+    font-size: 24px;
+    font-weight: 600;
+    color: $absolute-white-color;
+    line-height: 150%;
+}
+
+.featuresContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.feature {
+    border-left: #703BF7 solid 1px;
+    color: $gray-text-color;
+    display: flex;
+    background-color: #1A1A1A;
+    padding: 18px 24px;
+}
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+    .propertyWrapper {
+        margin: 80px;
+    }
+
+    .botSubContainer {
+        padding: 40px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .location {
+        font-size: 14px;
+    }
+
+    .priceText {
+        font-size: 14px;
+    }
+
+    .priceAmount {
+        font-size: 20px;
+    }
+
+    .topImages {
+        padding: 10px;
+        grid-template-columns: repeat(9, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+    }
+
+    .botImages {
+        padding-top: 10px;
+    }
+
+    .propertyImgMin {
+        height: 74px;
+        width: 122px;
+    }
+
+    .propertyImgMax1 {
+        width: 585px;
+        height: 507px;
+    }
+
+    .propertyImgMax2 {
+        width: 585px;
+        height: 507px;
+    }
+
+    .arrowLeft {
+        padding: 15px;
+    }
+
+    .arrowRight {
+        padding: 15px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .propertyWrapper {
+        margin: 40px;
+    }
+
+    .topContainer {
+        gap: 20px;
+    }
+
+    .botSubContainer {
+        padding: 40px 0;
+    }
+
+    .topImages {
+        padding: 10px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 10px;
+        justify-items: center;
+    }
+
+    .botImages {
+        padding-top: 10px;
+    }
+
+    .propertyImgMin {
+        height: 74px;
+        width: 122px;
+    }
+
+    .propertyImgMax1 {
+        width: 385px;
+        height: 307px;
+    }
+
+    .propertyImgMax2 {
+        width: 385px;
+        height: 307px;
+    }
+
+    .arrowLeft {
+        padding: 10px;
+    }
+
+    .arrowRight {
+        padding: 10px;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 1024px) {
+    .propertyWrapper {
+        margin: 40px;
+    }
+
+    .topContainer {
+        gap: 20px;
+    }
+
+    .topSubContainer {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .textContainer1 {
+        justify-content: center;
+    }
+
+    .textContainer2 {
+        align-items: center;
+    }
+
+    .botSubContainer {
+        padding: 40px 0;
+    }
+
+    .imagesContainer {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .topImages {
+        padding: 10px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 10px;
+        justify-items: center;
+    }
+
+    .botImages {
+        padding-bottom: 10px;
+    }
+
+    .propertyImgMin {
+        height: 54px;
+        width: 102px;
+    }
+
+    .propertyImgMax1 {
+        width: 340px;
+        height: 271px;
+    }
+
+    .propertyImgMax2 {
+        display: none;
+    }
+
+    .arrowLeft {
+        padding: 10px;
+    }
+
+    .arrowRight {
+        padding: 10px;
+    }
+
+    .bottomContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .leftSubContainer {
+        gap: 20px;
+        padding: 0;
+    }
+
+    .leftInfo {
+        flex-direction: column;
+    }
+
+    .infoItem {
+        flex-direction: row;
+        font-size: 18px;
+    }
+
+    .feature {
+        gap: 10px;
+        align-items: center;
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 426px) {
+    .propertyWrapper {
+        margin: 10px;
+    }
+
+    .topContainer {
+        gap: 20px;
+    }
+
+    .topSubContainer {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .botSubContainer {
+        padding: 20px 0;
+    }
+    
+    .textContainer1 {
+        justify-content: center;
+    }
+
+    .textContainer2 {
+        align-items: center;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .location {
+        font-size: 14px;
+    }
+
+    .priceText {
+        font-size: 14px;
+    }
+
+    .priceAmount {
+        font-size: 18px;
+    }
+
+    .imagesContainer {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .topImages {
+        padding: 10px 0;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 10px;
+        justify-items: center;
+    }
+
+    .botImages {
+        padding-bottom: 10px;
+    }
+
+    .propertyImgMin {
+        height: 41px;
+        width: 67px;
+    }
+
+    .propertyImgMax1 {
+        width: 280px;
+        height: 211px;
+    }
+
+    .propertyImgMax2 {
+        display: none;
+    }
+
+    .arrowLeft {
+        padding: 5px;
+    }
+
+    .arrowRight {
+        padding: 5px;
+    }
+
+    .indicatorGray {
+        width: 14px;
+    }
+
+    .indicatorBlue {
+        width: 14px;
+    }
+
+    .bottomContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .leftSubContainer {
+        gap: 20px;
+        padding: 0;
+    }
+
+    .leftInfo {
+        flex-direction: column;
+    }
+
+    .infoItem {
+        flex-direction: row;
+        font-size: 16px;
+    }
+
+    .feature {
+        gap: 10px;
+        align-items: center;
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+}

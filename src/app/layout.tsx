@@ -9,6 +9,9 @@ const urbanist = Urbanist({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Estatein",
   description: "Discover Your Dream Property with Estatein",
+  icons: {
+    icon: '/icons/favicon.ico',
+  },
 };
 
 export default function RootLayout({
@@ -19,9 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={urbanist.className}>
       <body className="wrapper"><ReactQueryProvider>
-                    {/* <Header /> */}
                     <main>{children}</main>
-                    {/* <Footer /> */}
                 </ReactQueryProvider></body>
     </html>
   );

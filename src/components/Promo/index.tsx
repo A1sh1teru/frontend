@@ -1,8 +1,20 @@
-import Link from "next/link";
-import styles from "./Promo.module.scss"
+'use client'
+
 import Image from "next/image";
+import Link from "next/link";
+import styles from "./Promo.module.scss";
+import { useCardsQuery } from "@/hooks/useCardsQuery";
+import { useState } from "react";
 
 function Promo() {
+
+    const { data, isLoading, isSuccess } = useCardsQuery();
+
+    const [isExpanded, setIsExpanded] = useState(false);
+
+    const handleToggle = () => {
+        setIsExpanded(!isExpanded);
+    }
 
     return (
 
@@ -14,7 +26,7 @@ function Promo() {
                 </h2>
                 <div className={styles.topSubContainer}>
                     <div className={styles.subTitle}>
-                    Explore our handpicked selection of featured properties. Each listing offers a glimpse into exceptional homes and investments available through <br />
+                    Explore our handpicked selection of featured properties. Each listing offers a glimpse into exceptional homes and investments available through
                     Estatein. Click "View Details" for more information.
                     </div>
 
@@ -33,82 +45,102 @@ function Promo() {
                     <article className={styles.card}>
 
                         <div className={styles.img}>
-                            <Image
-                                src="img/Villa.svg"
-                                fill={true}
-                                alt="Villa"
-                                quality={100}
-                            />
+                            {data &&(
+                                <Image src={`/${data?.[19]?.images[0]}`} fill={true} quality={100} alt="Villa" />
+                            )}
                         </div>
 
                         <div className={styles.cardInfoContainer}>
 
-                            <span className={styles.cardTitle}>
-                                Seaside Serenity Villa
-                            </span>
+                            {data && (
+                                <span className={styles.cardTitle}>
+                                    {data?.[19].title}
+                                </span>
+                            )}
 
-                            <span className={styles.cardDescription}>
-                                A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood...
-                                <span className={styles.readMoreBtn}>Read More</span>
-                            </span>
-
+                            {data && (
+                                <span className={styles.cardDescription}>
+                                    {isExpanded ? 
+                                        data?.[19].description : 
+                                        `${data?.[19].description.slice(0, 130)}...`
+                                    }
+                                    {!isExpanded && 
+                                        <span className={styles.readMoreBtn} onClick={handleToggle}>
+                                            Read More
+                                        </span>
+                                    }
+                                    {isExpanded &&
+                                        <span className={styles.readMoreBtn} onClick={handleToggle}>
+                                            Close
+                                        </span>
+                                            }
+                                </span>
+                            )}
                             <div className={styles.cardOptions}>
 
-                                <span className={styles.optionsItem}>
-                                    <i className={styles.cardIcon}>
-                                        <Image
-                                            src="icons/Bed.svg"
-                                            width={24}
-                                            height={24}
-                                            alt="Bed"
-                                            quality={100}
-                                        />
-                                    </i>
-                                    4-Bedroom
+                                {data && (
+                                        <span className={styles.optionsItem}>
+                                            <i className={styles.cardIcon}>
+                                                <Image
+                                                    src="icons/Bed.svg"
+                                                    width={24}
+                                                    height={24}
+                                                    alt="Bed"
+                                                    quality={100}
+                                                />
+                                            </i>
+                                            {data?.[19].bedroom}-Bedroom
 
-                                </span>
+                                        </span>
+                                    )}
 
-                                <span className={styles.optionsItem}>
-                                    <i className={styles.cardIcon}>
-                                        <Image
-                                            src="icons/Bath.svg"
-                                            width={24}
-                                            height={24}
-                                            alt="Bath"
-                                            quality={100}
-                                        />
-                                    </i>
-                                    3-Bathroom
+                                    {data &&(
+                                        <span className={styles.optionsItem}>
+                                            <i className={styles.cardIcon}>
+                                                <Image
+                                                    src="icons/Bath.svg"
+                                                    width={24}
+                                                    height={24}
+                                                    alt="Bath"
+                                                    quality={100}
+                                                />
+                                            </i>
+                                            {data?.[19].bathroom}-Bathroom
 
-                                </span>
+                                        </span>
+                                    )}
+                                    
+                                    {data && (
+                                        <span className={styles.optionsItem}>
+                                            <i className={styles.cardIcon}>
+                                                <Image
+                                                    src="icons/SmallHome.svg"
+                                                    width={24}
+                                                    height={24}
+                                                    alt="Building"
+                                                    quality={100}
+                                                />
+                                            </i>
+                                            {data?.[19].category.propertyType}
 
-                                <span className={styles.optionsItem}>
-                                    <i className={styles.cardIcon}>
-                                        <Image
-                                            src="icons/SmallHome.svg"
-                                            width={24}
-                                            height={24}
-                                            alt="Building"
-                                            quality={100}
-                                        />
-                                    </i>
-                                    Villa
-
-                                </span>
+                                        </span>
+                                    )}
 
                             </div>
 
                             <div className={styles.cardDetails}>
 
-                                <div className={styles.priceContainer}>
+                                {data && (
+                                    <div className={styles.priceContainer}>
 
-                                    <span className={styles.priceText}>Price</span>
-                                    <span className={styles.priceAmount}>$550,000</span>
+                                        <span className={styles.priceText}>Price</span>
+                                        <span className={styles.priceAmount}>${data?.[19].price}</span>
 
-                                </div>
+                                    </div>
+                                )}
 
                                 <div className={styles.detailsBtn}>
-                                    <Link href="/properties/property" className={styles.propertyLink}>
+                                    <Link href="/properties/property1" className={styles.propertyLink2}>
                                         View Property Details
                                     </Link>
                                 </div>
@@ -120,172 +152,106 @@ function Promo() {
                     </article>
 
                     <article className={styles.card}>
+
                         <div className={styles.img}>
-                            <Image
-                                src="img/Apartment.svg"
-                                fill={true}
-                                alt="Villa"
-                                quality={100}
-                            />
+                            {data &&(
+                                <Image src={`/${data?.[19]?.images[0]}`} fill={true} quality={100} alt="Villa" />
+                            )}
                         </div>
 
                         <div className={styles.cardInfoContainer}>
-                            <span className={styles.cardTitle}>
-                                Metropolitan Haven
-                            </span>
 
-                            <span className={styles.cardDescription}>
-                                A chic and fully-furnished 2-bedroom apartment with panoramic city views...
-                                <span className={styles.readMoreBtn}>Read More</span>
-                            </span>
+                            {data && (
+                                <span className={styles.cardTitle}>
+                                    {data?.[19].title}
+                                </span>
+                            )}
 
+                            {data && (
+                                <span className={styles.cardDescription}>
+                                    {isExpanded ? 
+                                        data?.[19].description : 
+                                        `${data?.[19].description.slice(0, 130)}...`
+                                    }
+                                    {!isExpanded && 
+                                        <span className={styles.readMoreBtn} onClick={handleToggle}>
+                                            Read More
+                                        </span>
+                                    }
+                                    {isExpanded &&
+                                        <span className={styles.readMoreBtn} onClick={handleToggle}>
+                                            Close
+                                        </span>
+                                            }
+                                </span>
+                            )}
                             <div className={styles.cardOptions}>
 
-                                <span className={styles.optionsItem}>
-                                    <i className={styles.cardIcon}>
-                                        <Image
-                                            src="icons/Bed.svg"
-                                            width={24}
-                                            height={24}
-                                            alt="Bed"
-                                            quality={100}
-                                        />
-                                    </i>
-                                    2-Bedroom
+                                {data && (
+                                        <span className={styles.optionsItem}>
+                                            <i className={styles.cardIcon}>
+                                                <Image
+                                                    src="icons/Bed.svg"
+                                                    width={24}
+                                                    height={24}
+                                                    alt="Bed"
+                                                    quality={100}
+                                                />
+                                            </i>
+                                            {data?.[19].bedroom}-Bedroom
 
-                                </span>
+                                        </span>
+                                    )}
 
-                                <span className={styles.optionsItem}>
-                                    <i className={styles.cardIcon}>
-                                        <Image
-                                            src="icons/Bath.svg"
-                                            width={24}
-                                            height={24}
-                                            alt="Bath"
-                                            quality={100}
-                                        />
-                                    </i>
-                                    2-Bathroom
+                                    {data &&(
+                                        <span className={styles.optionsItem}>
+                                            <i className={styles.cardIcon}>
+                                                <Image
+                                                    src="icons/Bath.svg"
+                                                    width={24}
+                                                    height={24}
+                                                    alt="Bath"
+                                                    quality={100}
+                                                />
+                                            </i>
+                                            {data?.[19].bathroom}-Bathroom
 
-                                </span>
+                                        </span>
+                                    )}
+                                    
+                                    {data && (
+                                        <span className={styles.optionsItem}>
+                                            <i className={styles.cardIcon}>
+                                                <Image
+                                                    src="icons/SmallHome.svg"
+                                                    width={24}
+                                                    height={24}
+                                                    alt="Building"
+                                                    quality={100}
+                                                />
+                                            </i>
+                                            {data?.[19].category.propertyType}
 
-                                <span className={styles.optionsItem}>
-                                    <i className={styles.cardIcon}>
-                                        <Image
-                                            src="icons/SmallHome.svg"
-                                            width={24}
-                                            height={24}
-                                            alt="Building"
-                                            quality={100}
-                                        />
-                                    </i>
-                                    Villa
-
-                                </span>
+                                        </span>
+                                    )}
 
                             </div>
 
                             <div className={styles.cardDetails}>
 
-                                <div className={styles.priceContainer}>
+                                {data && (
+                                    <div className={styles.priceContainer}>
 
-                                    <span className={styles.priceText}>Price</span>
-                                    <span className={styles.priceAmount}>$550,000</span>
+                                        <span className={styles.priceText}>Price</span>
+                                        <span className={styles.priceAmount}>${data?.[19].price}</span>
 
-                                </div>
-
-                                <div className={styles.detailsBtn}>
-                                    <Link href="/properties/property" className={styles.propertyLink}>
-                                        View Property Details
-                                    </Link>
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </article>
-
-                    <article className={styles.card}>
-                        <div className={styles.img}>
-                            <Image
-                                src="img/Cottage.svg"
-                                fill={true}
-                                alt="Villa"
-                                quality={100}
-                            />
-                        </div>
-
-                        <div className={styles.cardInfoContainer}>
-                            <span className={styles.cardTitle}>
-                                Rustic Retreat Cottage
-                            </span>
-
-                            <span className={styles.cardDescription}>
-                                An elegant 3-bedroom, 2.5-bathroom townhouse in a gated community...
-                                <span className={styles.readMoreBtn}>Read More</span>
-                            </span>
-
-                            <div className={styles.cardOptions}>
-
-                                <span className={styles.optionsItem}>
-                                    <i className={styles.cardIcon}>
-                                        <Image
-                                            src="icons/Bed.svg"
-                                            width={24}
-                                            height={24}
-                                            alt="Bed"
-                                            quality={100}
-                                        />
-                                    </i>
-                                    3-Bedroom
-
-                                </span>
-
-                                <span className={styles.optionsItem}>
-                                    <i className={styles.cardIcon}>
-                                        <Image
-                                            src="icons/Bath.svg"
-                                            width={24}
-                                            height={24}
-                                            alt="Bath"
-                                            quality={100}
-                                        />
-                                    </i>
-                                    3-Bathroom
-
-                                </span>
-
-                                <span className={styles.optionsItem}>
-                                    <i className={styles.cardIcon}>
-                                        <Image
-                                            src="icons/SmallHome.svg"
-                                            width={24}
-                                            height={24}
-                                            alt="Building"
-                                            quality={100}
-                                        />
-                                    </i>
-                                    Cottage
-
-                                </span>
-
-                            </div>
-
-                            <div className={styles.cardDetails}>
-
-                                <div className={styles.priceContainer}>
-
-                                    <span className={styles.priceText}>Price</span>
-                                    <span className={styles.priceAmount}>$550,000</span>
-
-                                </div>
+                                    </div>
+                                )}
 
                                 <div className={styles.detailsBtn}>
-
-                                    <Link href="/properties/property" className={styles.propertyLink}>
+                                    <Link href="/properties/property1" className={styles.propertyLink2}>
                                         View Property Details
                                     </Link>
-
                                 </div>
 
                             </div>
@@ -294,6 +260,114 @@ function Promo() {
 
                     </article>
 
+                    <article className={styles.card}>
+
+                        <div className={styles.img}>
+                            {data &&(
+                                <Image src={`/${data?.[19]?.images[0]}`} fill={true} quality={100} alt="Villa" />
+                            )}
+                        </div>
+
+                        <div className={styles.cardInfoContainer}>
+
+                            {data && (
+                                <span className={styles.cardTitle}>
+                                    {data?.[19].title}
+                                </span>
+                            )}
+
+                            {data && (
+                                <span className={styles.cardDescription}>
+                                    {isExpanded ? 
+                                        data?.[19].description : 
+                                        `${data?.[19].description.slice(0, 130)}...`
+                                    }
+                                    {!isExpanded && 
+                                        <span className={styles.readMoreBtn} onClick={handleToggle}>
+                                            Read More
+                                        </span>
+                                    }
+                                    {isExpanded &&
+                                        <span className={styles.readMoreBtn} onClick={handleToggle}>
+                                            Close
+                                        </span>
+                                            }
+                                </span>
+                            )}
+                            <div className={styles.cardOptions}>
+
+                                {data && (
+                                        <span className={styles.optionsItem}>
+                                            <i className={styles.cardIcon}>
+                                                <Image
+                                                    src="icons/Bed.svg"
+                                                    width={24}
+                                                    height={24}
+                                                    alt="Bed"
+                                                    quality={100}
+                                                />
+                                            </i>
+                                            {data?.[19].bedroom}-Bedroom
+
+                                        </span>
+                                    )}
+
+                                    {data &&(
+                                        <span className={styles.optionsItem}>
+                                            <i className={styles.cardIcon}>
+                                                <Image
+                                                    src="icons/Bath.svg"
+                                                    width={24}
+                                                    height={24}
+                                                    alt="Bath"
+                                                    quality={100}
+                                                />
+                                            </i>
+                                            {data?.[19].bathroom}-Bathroom
+
+                                        </span>
+                                    )}
+                                    
+                                    {data && (
+                                        <span className={styles.optionsItem}>
+                                            <i className={styles.cardIcon}>
+                                                <Image
+                                                    src="icons/SmallHome.svg"
+                                                    width={24}
+                                                    height={24}
+                                                    alt="Building"
+                                                    quality={100}
+                                                />
+                                            </i>
+                                            {data?.[19].category.propertyType}
+
+                                        </span>
+                                    )}
+
+                            </div>
+
+                            <div className={styles.cardDetails}>
+
+                                {data && (
+                                    <div className={styles.priceContainer}>
+
+                                        <span className={styles.priceText}>Price</span>
+                                        <span className={styles.priceAmount}>${data?.[19].price}</span>
+
+                                    </div>
+                                )}
+
+                                <div className={styles.detailsBtn}>
+                                    <Link href="/properties/property1" className={styles.propertyLink2}>
+                                        View Property Details
+                                    </Link>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
                 </div>
 
                 <div className={styles.bottomContainer}>

@@ -73,6 +73,14 @@
     font-weight: 500;
 }
 
+.browseButton:hover {
+    background-color: #141414;
+    transition: 0.3s;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #262626;
+}
+
 .buttonContainer2 {
     display: flex;
     margin-left: 162px;
@@ -298,6 +306,16 @@
     position: relative;
 }
 
+.link {
+    color: #FFFFFF;
+}
+
+.link:hover {
+    opacity: 0.5;
+    transition: 0.3s;
+    color: #703BF7;
+}
+
 @media (min-width: 1366px) and (max-width: 1979px) {
     .title2 {
         font-size: 46px;
@@ -380,6 +398,34 @@
 
     .leftSubContainer1 {
         padding-bottom: 98px;
+    }
+
+}
+
+@media (min-width: 1023px) and (max-width: 1919px) {
+    .subcontainer2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        justify-items: center;
+    }
+
+    .findContainer {
+        margin-bottom: 0;
+    }
+
+    .unlockContainer {
+        margin-bottom: 0;
+    }
+
+    .managementContainer {
+        margin-top: 0;
+    }
+
+    .investmentsContainer {
+        margin-top: 0;
     }
 }
 
@@ -532,23 +578,40 @@
 }
 
 @media (max-width: 480px) {
+    .buttonContainer1 {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .browseButton {
+        margin: 0;
+    }
+
     .findContainer {
-        width: fit-content;
+        width: auto;
         padding: 0 20px;
     }
 
     .unlockContainer {
-        width: fit-content;
+        width: auto;
         padding: 0 20px;
     }
 
     .managementContainer {
-        width: fit-content;
+        width: auto;
         padding: 0 10px;
     }
 
     .investmentsContainer {
-        width: fit-content;
+        width: auto;
         padding: 0 10px;
+    }
+
+    .subcontainer2 {
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }

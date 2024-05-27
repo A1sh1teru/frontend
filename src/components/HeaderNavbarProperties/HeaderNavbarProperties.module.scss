@@ -23,12 +23,16 @@
     color:#FFFFFF;
 }
 
-.homeButton {
+.navLink:hover {
+    color: #703BF7;
+    transition: 0.3s;
+    text-shadow: 0px 0px 10px #703BF7;
+}
+
+.propertiesButton {
     display: flex;
     justify-content: center; 
     align-items: center;
-    // width: 96px;
-    // height: 55px;
     padding: 20px 30px;
     background-color: #141414;
     border-radius: 10px;

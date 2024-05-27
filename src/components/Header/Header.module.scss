@@ -1,6 +1,21 @@
 @import '../../styles/mixins.scss';
 @import '../../styles/variables.scss';
 
+// .wrapper {
+//     position: fixed;
+//     top: 49px;
+//     left: 0;
+//     max-width: calc(100% - 17px);
+//     z-index: 1000;
+//     overflow: hidden;
+//     transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+//     transform: translateY(0);
+// }
+
+// .wrapperHidden {
+//     transform: translateY(-100%);
+// }
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -72,6 +87,12 @@
     left: auto;
     z-index: 10;
 }
+
+// @media (min-width: 320px) and (max-width: 1023px) {
+//     .wrapper {
+//         max-width: 100%; 
+//     }
+// }
 
 @media (min-width: 1440px) {
 

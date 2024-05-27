@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './Footer.module.scss'
 import Image from 'next/image';
 
@@ -30,7 +31,7 @@ function Footer() {
 
                         <i className={styles.icon1}>
                             <Image 
-                                src="icons/Mail.svg"
+                                src="/icons/Mail.svg"
                                 width={24}
                                 height={24}
                                 alt="Logo"
@@ -43,7 +44,7 @@ function Footer() {
 
                         <i className={styles.icon2}>
                             <Image 
-                                src="icons/Send.svg"
+                                src="/icons/Send.svg"
                                 width={30}
                                 height={30}
                                 alt="Logo"
@@ -57,42 +58,42 @@ function Footer() {
                 <div className={styles.footerNavigation}>
 
                     <ul className={styles.homeList}>
-                        <li className={styles.topTitle}>Home</li>
-                        <li className={styles.otherItem}>Hero Section</li>
-                        <li className={styles.otherItem}>Features</li>
-                        <li className={styles.otherItem}>Properties</li>
-                        <li className={styles.otherItem}>Testimonials</li>
-                        <li className={styles.bottomItem}>FAQ's</li>
+                        <Link href="#" className={styles.link}><li className={styles.topTitle}>Home</li></Link>
+                        <Link href="#" className={styles.link}><li className={styles.otherItem}>Hero Section</li></Link>
+                        <Link href="#" className={styles.link}><li className={styles.otherItem}>Features</li></Link>
+                        <Link href="#" className={styles.link}><li className={styles.otherItem}>Properties</li></Link>
+                        <Link href="#" className={styles.link}><li className={styles.otherItem}>Testimonials</li></Link>
+                        <Link href="#" className={styles.link}><li className={styles.bottomItem}>FAQ's</li></Link>
                     </ul>
 
                     <ul className={styles.aboutUsList}>
-                        <li className={styles.topTitle}>About Us</li>
-                        <li className={styles.otherItem}>Our story</li>
-                        <li className={styles.otherItem}>Our Works</li>
-                        <li className={styles.otherItem}>How it Works</li>
-                        <li className={styles.otherItem}>Our Team</li>
-                        <li className={styles.bottomItem}>Our Clients</li>
+                        <Link href="#" className={styles.link}><li className={styles.topTitle}>About Us</li></Link>
+                        <Link href="#" className={styles.link}><li className={styles.otherItem}>Our story</li></Link>
+                        <Link href="#" className={styles.link}><li className={styles.otherItem}>Our Works</li></Link>
+                        <Link href="#" className={styles.link}><li className={styles.otherItem}>How it Works</li></Link>
+                        <Link href="#" className={styles.link}><li className={styles.otherItem}>Our Team</li></Link>
+                        <Link href="#" className={styles.link}><li className={styles.bottomItem}>Our Clients</li></Link>
                     </ul>
 
                     <ul className={styles.propertiesList}>
-                        <li className={styles.topTitle}>Properties</li>
-                        <li className={styles.otherItem}>Portfolio</li>
-                        <li className={styles.bottomItem}>Categories</li>
+                        <Link href="#" className={styles.link}><li className={styles.topTitle}>Properties</li></Link>
+                        <Link href="#" className={styles.link}><li className={styles.otherItem}>Portfolio</li></Link>
+                        <Link href="#" className={styles.link}><li className={styles.bottomItem}>Categories</li></Link>
                     </ul>
 
                     <ul className={styles.servicesList}>
-                        <li className={styles.topTitle}>Services</li>
-                        <li className={styles.otherItem}>Valuation Mastery</li>
-                        <li className={styles.otherItem}>Strategic Marketing</li>
-                        <li className={styles.otherItem}>Negotiation Wizardry</li>
-                        <li className={styles.otherItem}>Closing Success</li>
-                        <li className={styles.bottomItem}>Property Management</li>
+                        <Link href="#" className={styles.link}><li className={styles.topTitle}>Services</li></Link>
+                        <Link href="#" className={styles.link}><li className={styles.otherItem}>Valuation Mastery</li></Link>
+                        <Link href="#" className={styles.link}><li className={styles.otherItem}>Strategic Marketing</li></Link>
+                        <Link href="#" className={styles.link}><li className={styles.otherItem}>Negotiation Wizardry</li></Link>
+                        <Link href="#" className={styles.link}><li className={styles.otherItem}>Closing Success</li></Link>
+                        <Link href="#" className={styles.link}><li className={styles.bottomItem}>Property Management</li></Link>
                     </ul>
 
                     <ul className={styles.contactUsList}>
-                        <li className={styles.topTitle}>Contact Us</li>
-                        <li className={styles.otherItem}>Contact Form</li>
-                        <li className={styles.bottomItem}>Our Offices</li>
+                        <Link href="#" className={styles.link}><li className={styles.topTitle}>Contact Us</li></Link>
+                        <Link href="#" className={styles.link}><li className={styles.otherItem}>Contact Form</li></Link>
+                        <Link href="#" className={styles.link}><li className={styles.bottomItem}>Our Offices</li></Link>
                     </ul>
 
                 </div>
@@ -117,7 +118,7 @@ function Footer() {
 
                     <div className={styles.btnIcon}>
                         <Image 
-                            src="icons/Facebook.svg"
+                            src="/icons/Facebook.svg"
                             width={24}
                             height={24}
                             alt="Logo"
@@ -126,7 +127,7 @@ function Footer() {
 
                     <div className={styles.btnIcon}>
                         <Image 
-                            src="icons/Inst.svg"
+                            src="/icons/Inst.svg"
                             width={24}
                             height={24}
                             alt="Logo"
@@ -135,7 +136,7 @@ function Footer() {
 
                     <div className={styles.btnIcon}>
                         <Image 
-                            src="icons/Twitter.svg"
+                            src="/icons/Twitter.svg"
                             width={24}
                             height={24}
                             alt="Logo"
@@ -144,7 +145,7 @@ function Footer() {
 
                     <div className={styles.btnIcon}>
                         <Image 
-                            src="icons/YouTube.svg"
+                            src="/icons/YouTube.svg"
                             width={24}
                             height={24}
                             alt="Logo"

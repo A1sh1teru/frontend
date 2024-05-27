@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './Banner2.module.scss'
 import Image from 'next/image';
 
@@ -9,7 +10,7 @@ function Banner2() {
 
             <div className={styles.img1}>
                 <Image
-                    src='img/AbstractDesign3.svg'
+                    src='/img/AbstractDesign3.svg'
                     width={566}
                     height={308}
                     alt='AbstractDesign3'
@@ -18,7 +19,7 @@ function Banner2() {
 
             <div className={styles.img2}>
                 <Image
-                    src='img/AbstractDesign4.svg'
+                    src='/img/AbstractDesign4.svg'
                     width={725}
                     height={394}
                     alt='AbstractDesign4'
@@ -45,7 +46,7 @@ function Banner2() {
 
                 <div className={styles.btn}>
 
-                    Explore Properties
+                    <Link href="/properties" className={styles.link}>Explore Properties</Link>
 
                 </div>
 

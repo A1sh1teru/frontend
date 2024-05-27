@@ -16,7 +16,7 @@ function HeaderBurgerMenu() {
         },
         {
             name: "Properties",
-            Link: "/Properties",
+            Link: "/properties",
         },
         {
             name: "Services",
@@ -43,7 +43,7 @@ function HeaderBurgerMenu() {
                 <ul className={styles.ul}>
                     {data.map((item, i) => (
                         <li key={i} className={styles.li}>
-                            <a href="#" className={styles.a}>
+                            <a href={item.Link} className={styles.a}>
                                 {item.name}
                             </a>
                         </li>

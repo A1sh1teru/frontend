@@ -1,3 +1,5 @@
+'use client'
+
 import styles from "./page.module.scss"
 import Banner from "@/components/Banner"
 import Header from "@/components/Header"
@@ -6,7 +8,8 @@ import Cards from "@/components/Cards"
 import Banner2 from "@/components/Banner2"
 import Footer from "@/components/Footer"
 
-export default function Properties() {
+export default function Properties3() {
+
     return (
         <div className={styles.propertiesPage}>
             <Banner></Banner>
