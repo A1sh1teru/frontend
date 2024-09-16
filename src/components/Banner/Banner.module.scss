@@ -54,6 +54,16 @@
     left: auto;
 }
 
+.link {
+    color: #FFFFFF;
+}
+
+.link:hover {
+    color: #703BF7;
+    transition: 0.3s;
+    text-shadow: 0px 0px 10px #703BF7;
+}
+
 .cross:hover {
     cursor: pointer;
     opacity: 0.5;

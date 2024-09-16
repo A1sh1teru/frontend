@@ -62,7 +62,7 @@ function Header() {
                         Contact Us
                     </div>
 
-                    <span className={styles.authBtn}><Link href="/auth">Sign In</Link></span>
+                    <span className={styles.authBtn}><Link href="/auth" className={styles.link}>Sign In</Link></span>
 
                 </div>
 

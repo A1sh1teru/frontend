@@ -35,7 +35,7 @@ export default function Banner() {
             </span>
 
             <span className={styles.text2}>
-              <Link href="/properties">Learn More</Link>
+              <Link href="/properties" className={styles.link}>Learn More</Link>
             </span>
 
             <div className={styles.cross} onClick={handleRemoveBanner}>
