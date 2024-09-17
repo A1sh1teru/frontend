@@ -251,7 +251,7 @@ function PropertyInfo() {
                                 </i>
                                 {data && (
                                 <span className={styles.featureText}>
-                                    {data[19].features[1]}
+                                    {data[19].features[0]}
                                 </span>
                                 )}
                             </div>
@@ -269,7 +269,7 @@ function PropertyInfo() {
 
                                 {data && (
                                     <span className={styles.featureText}>
-                                        {/* Private beach access for morning strolls and sunset views */} {data[19].features[2]}
+                                        {/* Private beach access for morning strolls and sunset views */} {data[19].features[0]}
                                     </span>
                                 )}
 
@@ -287,7 +287,7 @@ function PropertyInfo() {
                                 </i>
                                 {data &&(
                                     <span className={styles.featureText}>
-                                        {/* Master suite with a spa-inspired bathroom and ocean-facing balcony */} {data[19].features[3]}
+                                        {/* Master suite with a spa-inspired bathroom and ocean-facing balcony */} {data[19].features[0]}
                                     </span>
                                 )}
 
@@ -305,7 +305,7 @@ function PropertyInfo() {
                                 </i>
                                 {data &&(
                                     <span className={styles.featureText}>
-                                        {/* Private garage and ample storage space */} {data[19].features[4]}
+                                        {/* Private garage and ample storage space */} {data[19].features[0]}
                                     </span>
                                 )}
                             </div>
